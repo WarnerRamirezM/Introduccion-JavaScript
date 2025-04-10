@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hola Javascript</h1>
+    <script>
+
+/* let contador = 0;
+       
+        while(contador < 10){
+                console.log(contador)
+            contador++;
+        } */
+
+
+//      FUNCIONES ARROW FUNTIONS
+/*PARA ESCRIBIR COMILLAS DE INTERPOLACION ALT + 96
+        
+        const saludar = nombre => console.log(`HOLA ${nombre}`); 
+        saludar("Hernan");
+        */
+
+       //  const sumar = (a,b) => a+b;
+       // console.log(sumar(12,1));
+
+
+//CUANDO TIENE VARIAS LINEAS
+/*
+    const funcionDeVariasLineas = () => {
+            console.log("Uno");
+            console.log("dos");
+            console.log("tres");
+    }
+        
+    funcionDeVariasLineas();
+*/    
+//RECORRER UN FOR DE NUMEROS 
+/*
+const numeros = [1,2,3,4,5];
+numeros.forEach((el,index) => {
+    console.log(`El elemento ${el} esta en la posicion ${index}`);
+});
+
+*/    
+//ESTA FUNCION SE VUELVE EL OBJETO WINDOWS YA QUE NO ES FUNCION ARROW
+/*
+function Perro(){
+    console.log(this);
+}
+Perro();  
+*/
+
+
+//ESTA FUNCION SE VUELVE PARTE DEL OBJETO 
+/*
+const perrito = {
+    nombre: "kenai",
+    ladrar: function(){
+        console.log(this)
+    }
+}
+perrito.ladrar();
+*/
+
+
+//ESTA FUNCION SE VUELVE OBJETO DE WINDOWS AL SER ARROW FUNCTION PERTENECE AL CONTEXTO GLOBAL
+//LOS ARROW FUNCTION TIENEN LA CAPACIDAD DE TRANSFORMAR LA FUNCION DEL OBJETO EN CONTEXTO GLOBAL DE CAPTURAR
+//SE SALTAN EN CONTEXTO EN ESTE CASO EL OBJETO Y HEREDAN Y 
+// RECONOCEN EL CONTEXTO EN DONDE SE ENCUENTRA SU OBJETO PADRE EN DONDE HA SIDO DECLARADO
+
+/*
+const perritoArrow = {
+    nombre: "Jongs",
+    ladrar:() =>{
+        console.log(this)
+    }
+        
+}
+perritoArrow.ladrar();
+*/
+
+//SE DEBEN DE EXPRESAR DE LA SIGUIENTE MANERA
+/*const perro = {
+    nombre: "Jongs",
+    ladrar(){
+        console.log(this)
+    }
+        
+}
+perro.ladrar();*/
+
+
+
+
+    </script>
+</body>
+</html>

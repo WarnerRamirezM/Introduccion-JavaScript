@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hola Javascript</h1>
+    <script>
+        //METODO para asignar al prototipo a la funcion 
+        Animal.prototype.sonar = function () {
+            console.log("Hago sonidos por que estoy vivo");
+        }
+
+        //Elemento padre 
+        function Animal(nombre, genero) { //prototipo animal solo queda los atributos
+            this.nombre = nombre;
+            this.genero = genero; //va ser igual a lo que se pase por parametros
+
+        }
+            //herencia: Capacidad de heredar caracteristicas de un padre a un hijo 
+            function Perro(nombre, genero, size) {
+                this.super = Animal; //funcion constructora animal
+                this.super(nombre, genero);
+                this.size = size;
+            }
+            //perro esta heredando de animal
+            Perro.prototype = new Animal();
+            Perro.prototype.constructor = Perro;
+
+            //Sobre escritura de metodods  del prototipo padre en el hijo
+            Perro.prototype.sonar = function(){ //Viene de la clase padre que es animal
+                console.log("Soy un perro y mi sonido es un ladrido");
+            }
+            Perro.prototype.Ladrar = function(){
+                console.log("guau, guau!!!");
+            }
+
+            //Pruebas 
+            const snoopy = new Perro("snoopy","macho","mediano");
+            console.log(snoopy);
+            
+
+    </script>
+</body>
+</html>

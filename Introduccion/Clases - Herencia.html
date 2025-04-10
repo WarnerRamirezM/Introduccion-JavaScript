@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hola Javascript</h1>
+    <script>
+        //clases y herencia 
+        class Animal { //Hereda de object
+            constructor(nombre, genero) { //constructor de la clase
+                this.nombre = nombre;
+                this.genero = genero;
+            }
+            //metodos
+            sonar() {
+                console.log("Guau guau!!!");
+            }
+            saludar(nombre) {
+                console.log(`hola soy ${this.nombre}`);
+            }
+            //fin metodos
+
+        }//fin de clase Animal
+
+        //crear un animal 
+        const mimi = new Animal("mimi", "hembra"),
+            scooby = new Animal("scooby", "macho");
+        console.log(mimi);
+        console.log(scooby);
+
+        mimi.saludar();
+        mimi.sonar();
+
+        scooby.saludar();
+        scooby.sonar();
+
+        //herencia Perro(hijo) -> Animal(padre)
+        class Perro extends Animal{ //perro que herede de la clase Animal
+        //hereda de Animal
+            constructor(nombre, genero, size) {
+                super(nombre, genero); //es un metodo que manda a llamar el constructor de la clase padre(Animal)
+                this.size = size;
+            }
+            sonar(){
+                console.log("Soy un perro que hereda de animal y ladro");
+            }
+            ladrar(){
+                console.log("perro que hereda de Animal -- Guauuu!!!!! ");
+            }
+        
+        }
+
+        const mime = new Perro("mime", "hembra", "mediano"),
+            scoobe = new Perro("scobbe", "macho", "grande");
+        console.log(mime);
+        console.log(scoobe);
+        mime.saludar();
+        mime.ladrar();
+        scoobe.saludar();
+        scoobe.ladrar();
+        
+    </script>
+</body>
+
+</html>

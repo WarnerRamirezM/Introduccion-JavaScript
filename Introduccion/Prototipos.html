@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hola Javascript</h1>
+    <script>
+
+//Programacion orientada a objetos 
+/*
+clases: Un modelo a seguir(machote o esquema) para generar una instancia
+Objetos: atributos, metodos. Es una instancia de una clase
+    atributos: son variables dentro de un objeto.
+    metodos: son las acciones que puede realizar. 
+
+*/
+
+const animal = { //prototipo object
+    nombre: "Snoopy",
+    sonar(){
+        console.log("Hago sonidos por que estoy vivo");
+    }
+}
+console.log(animal);
+
+const animal2 = { //prototipo object
+    nombre: "Lolla Bunny",
+    sonar(){
+        console.log("Hago sonidos por que estoy vivo");
+    }
+}
+console.log(animal2);
+
+
+//FUNCION CONSTRUCTORA - SE CREA UNA SOLA VEZ
+/*APARTIR DE ELLA SE CREAN NUEVAS INSTANCIA */
+function Animal(nombre, genero){ //prototipo animal solo queda los atributos
+   this.nombre = nombre;
+   this.genero = genero; //va ser igual a lo que se pase por parametros
+   
+}
+//METODO para asignar al prototipo no a la funcion 
+Animal.prototype.sonar = function(){
+    console.log("Hago sonidos por que estoy vivo");
+}
+//prototipo animal
+const snoopy = new Animal("snoopy", "macho"),
+lolabonnie = new Animal("lola bonnie", "hembra");
+
+console.log(snoopy);
+console.log(lolabonnie);
+/*
+{nombre: 'Snoopy', sonar: ƒ}
+{nombre: 'Lolla Bunny', sonar: ƒ}
+Animal {nombre: 'snoopy', genero: 'macho', sonar: ƒ}
+Animal {nombre: 'lola bonnie', genero: 'hembra', sonar: ƒ}
+*/
+//con las funciones afuera 
+/*
+{nombre: 'Snoopy', sonar: ƒ}
+
+{nombre: 'Lolla Bunny', sonar: ƒ}
+
+Animal {nombre: 'snoopy', genero: 'macho'}
+
+Animal {nombre: 'lola bonnie', genero: 'hembra'}*/
+
+    </script>
+</body>
+</html>
