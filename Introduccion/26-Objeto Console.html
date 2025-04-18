@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hola Javascript</h1>
+    <script>
+      //objeto consolo 
+      console.log("REGISTRO DE LO QUE PASA EN LA CONSOLA");
+      console.error("Esto es un error");
+      console.warn("Esto es una advertencia");
+      console.info("Esto es una informacion");
+
+      let nombre = "Hernan",
+      apellido = "Ramirez", 
+      edad = 28;
+
+      console.log(nombre, apellido,edad);
+      console.log(apellido);
+      console.log(edad);
+
+      console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} años`);
+
+      //console .dir para ver todo lo del dom 
+      console.dir(document);
+
+      console.group("Curos de johnmircha en youtube");
+      console.log("Curso de javascript");
+      console.log("Curso de Node.js")
+      console.groupEnd();
+      console.clear();
+
+
+      //genera una tabla con filas del objeto console
+      console.log(console);
+      console.table(Object.entries(console));
+      console.clear();
+
+
+      //tabla de numeros 
+      const numeros = [1,2,3,4,5],
+        vocales = ["a","e","i","o","u"];
+
+      console.table(numeros);
+      console.table(vocales);
+      console.clear();
+
+      //temporizador 
+      console.time("Tiempo"); //bandera de tiempo
+      const arreglo = Array(1000000);
+
+      for(let i = 0; i<arreglo.length; i++){
+        //console.count("codigo for")
+        arreglo[i] = i; //se almacena el numero de la posicion como valor
+
+      }
+      console.timeEnd("Tiempo"); //fin badera de tiempo 
+      console.clear();
+
+
+      let x = 3,
+      y = 2,
+      pruebaXY = "Se espera que X siempre sea menor que Y";
+
+      console.assert(x < y, {x,y,pruebaXY});
+
+
+
+
+
+    </script>
+</body>
+
+</html>

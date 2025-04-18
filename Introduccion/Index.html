@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -10,42 +11,7 @@
 <body>
     <h1>Hola Javascript</h1>
     <script>
-      //metodo estatico 
-      /*Es aquel quue se puede ejecutar sin la necesidad de instanciar la clase */
-
-      //clases y herencia 
-        class Animal { //Hereda de object
-            constructor(nombre, genero) { //constructor de la clase
-                        this.nombre = nombre;
-                        this.genero = genero;
-                        this.raza = null; //razo al inicio sera null al crear un animal
-                    }
-
-                    static queEres() { //este metodo se puede ejecutar sin la necesidad de haber creado un objeto
-                        console.log("Los perros somos animales mamiferos que pertenecemos a la familia de los caninos");
-                    }
-
-                    //getter y setter 
-                    get getRaza() {
-                        return this.raza;
-                    }
-                    set setRaza(raza){
-                        this.raza = raza;
-                    }
-
-
-
-
-                }
-                Animal.queEres(); //se manda el metodo estatico
-                const animal = new Animal("Perro", "Canino");
-                //se trata como si fuera un atributo y no un metodo
-                animal.setRaza = "Pastor Aleman";
-                console.log(animal.getRaza);
-       
-
-
-
+    
 
     </script>
 </body>
