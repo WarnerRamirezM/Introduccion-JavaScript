@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hola Javascript</h1>
+    <script>
+    //EXPRESIONES REGULARES
+    /*sON UNA SECUENCIA DE CARACTERES QUE FORMA UN PATRON DE BUSQUEDA PRINCIPALMENTE UTILIZADA PARA LA 
+    BUSQUEDA DE PATRONES DE CADENAS DE CARACTERES
+    */
+   
+    //Manera de escribir expresiones regulares
+    let cadena = `Nuestros sistemas han detectad tráfico inusual procedente de tu red de ordenadores.
+    En esta página se comprueba si eres tú quien envía las solicitudes en lugar de un robot`;
+    let expReg = new RegExp("inusual","i"); //bandera g busca mas coincidencias, la bandera i ingnora mayusc y minuscu
+    //{1,#} se puede repetir de 1 a rango#
+    let expReg2 = /inusual{1,4}/i;  // -> /\d/ para ver si hay numeros. [0-9] si busca numeros- 
+
+    console.log(expReg.test(cadena)); //devuelve la busqueda si la encontro true o false
+    console.log(expReg.exec(cadena)); //exec funciona como un iterador por lo que se puede ver las busquedas anterios a la ultima busqueda
+
+        //expresion regular #2
+    console.log(expReg2.test(cadena));
+    console.log(expReg2.exec(cadena));
+
+
+
+
+    </script>
+</body>
+
+</html>

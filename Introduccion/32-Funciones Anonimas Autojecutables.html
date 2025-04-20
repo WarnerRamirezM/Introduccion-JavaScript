@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Hola Javascript</h1>
+    <script>
+    //funciones anonimas autoejecutables 
+    
+    (function(){
+        //aqui se escribe el codigo que va dentro de la funcion autoejecutable
+        console.log("Mi primer IIFE");
+
+
+
+
+    })(); //fin de funcion autoejecutable
+
+
+    (function(d,w,c){
+        //aqui se escribe el codigo que va dentro de la funcion autoejecutable
+        console.log("Mi Segunda IIFE");
+        console.log(d);
+        console.log(w);
+        c.log("este es un console.log");
+
+
+    })(document, window, console); //le pasamos los parametros (document[d], window[w], console[c])
+
+
+    //LISTA DE FORMAS DE ESCRIBIR FUNCIONES AUTOEJECUTABLES 
+    //clasica
+    (function(){
+        console.log("Version clasica");
+    })();
+
+    //la crockford
+    ((function(){
+        console.log("version crockford");
+    })());
+
+    //version unaria
+    +function(){
+        console.log("version unaria")
+    }();
+
+    //facebook
+    !function(){
+        console.log("Version facebook")
+    }();
+
+
+
+    </script>
+</body>
+
+</html>
