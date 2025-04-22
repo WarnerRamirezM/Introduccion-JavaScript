@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>
+        Ejercicios de Programacion Javascript
+    </h1>
+    <script>
+        /*1) Programa una función que cuente el número de caracteres
+        de una cadena de texto, pe.miFuncion("Hola Mundo") devolverá 10.*/
+
+        //FUNCION DECLARADA
+        function contarCaracteres(cadena = "") {
+            if (!cadena) {
+                console.warn("La cadena está vacía");
+            } else {
+                console.info(`La cadena ${cadena} tiene un total de ${cadena.length} caracteres.`);
+            }
+
+
+        }
+        contarCaracteres(); //cadena vacia
+        contarCaracteres("Hola mundo"); //cadena 10 caracteres
+
+        //FUNCION EXPRESADA 
+        const countCaracteres = (cadena = "") =>
+            (!cadena) ?
+                console.warn("La cadena está vacía") :
+                console.info(`La cadena ${cadena} tiene un total de ${cadena.length} caracteres.`);
+        //Llamada de la funcion 
+        countCaracteres("Hola");
+
+    </script>
+
+
+
+
+</body>
+</html>

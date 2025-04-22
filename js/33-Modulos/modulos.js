@@ -6,3 +6,6 @@ console.log(PI);
 
 console.log(calculos.sumar(3,4)); //funcion sumar importada del archivo aritmetica.js
 //saludar(); falta importar la funcion saludar
+
+
+import React, {component} from React //funcion para llamar react 

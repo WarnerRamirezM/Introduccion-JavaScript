@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta char         * set="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Ejercicio 4 Javascript</h1>
+    <script>
+        /**4) Programa una función que repita un texto X veces,
+
+        pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+        */
+
+        const repetirTexto = (text = "", veces = undefined) => {
+            if (!text) return console.warn("El texto esta vacio"); //validacion de texto 
+            if (veces === undefined) return console.warn("No define las veces de repeticion"); //validacion de repeticiones
+            if (veces === 0) return console.error("El numero no puede ser 0");
+            if (Math.sign(veces) === -1) return console.error("El numero de veces no puede ser negativo");
+            for (let i = 1; i <= veces; i++) {
+                console.info(`${text}, veces: ${i}`)
+            }
+        }
+        repetirTexto("Hola", 4); //completo
+        repetirTexto("Hola", -4); //validacion negativa
+        repetirTexto("", 4); //cadena vacia
+        repetirTexto("Hola"); //repeticiones vacia
+
+
+    </script>
+
+
+</body>
+</html>
