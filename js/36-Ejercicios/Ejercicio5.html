@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<h1>Ejercicio 5</h1>
+<body>
+    <script>
+        //programa una funcion que invierta las palabras de una cadena de texto, pe mi funcion(hola mundo) "odnuM aloH"
+        const invertirCadena = (cadena="") => 
+        (!cadena) ?
+        console.warn("No ingresa la cadena de texto"):
+        console.info(cadena.split("").reverse().join("")) //partir con split con separado por cada caracter siendo una posicion del nuevo elemento join para unir el juego de comillas vacio
+    
+    
+        invertirCadena(); //valida a que mande cadena de texto
+        invertirCadena("Hola mundo"); //invierte la cadena
+    
+    </script>
+    
+        
+</body>
+</html>

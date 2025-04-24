@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<h1>Ejercicio 6</h1>
+<body>
+<script>
+    /*Progrma una funcion para contar el numero de veces que se repite una 
+    palabra en un texto largo por ejemplo:
+    hola mundo, adios mundo 
+    devolvera 2 veces mundo*/
+    const encontarTexto = (cadena="", busquedaCadena= undefined) =>{
+        if(!cadena) return console.warn("No ingreso cadena");
+        if(!busquedaCadena) return console.warn("No ingresa palabra a buscar");
+
+        let i = 0;//variable que permite controlar el ciclo
+        contador = 0;
+        while(i !== -1){ //cuando no encuentra devuelve -1 
+            i = cadena.indexOf(busquedaCadena,i);
+            if(i !== -1){
+                i++;
+                contador ++;
+            }
+
+        }
+        return console.info(`La palabra ${busquedaCadena} se repite ${contador} veces`);
+
+
+    }
+    encontarTexto("Hola mundo, adios mundo","mundo");
+
+
+
+
+
+</script>
+
+
+    
+</body>
+</html>

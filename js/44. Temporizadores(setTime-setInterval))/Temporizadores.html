@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<h1>Asincronia en Javascript</h1>
+<body>
+    <script>
+
+        console.log("Inicio")
+        setTimeout(()=>{
+            console.log("Ejecutando un setTimeout esto se ejecuta una sola vez")
+        },3000);
+
+       /* setInterval(()=>{
+            console.log("Esto se ejecuta idenfinidamente cada intervalos de tiempo");
+        },1000);*/
+
+        /* para que funcione hay que guardarlo en una variable
+
+        let temporizador = setInterval(()=>{ //estructura del set recibe una funcion interna
+            console.log(new Date().toLocaleDateString());
+        });
+
+
+        clearTimeout(temporizador);
+        */
+
+
+    </script>
+    
+</body>
+</html>

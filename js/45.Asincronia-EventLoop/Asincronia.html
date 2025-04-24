@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<h1>Asincronia En Javascript</h1>
+<body>
+    <script>
+        /*Javascript ejecuta un solo proceso o hilo a la vez evita problemas de concurrencia
+        -Preocupaciones: Operacines largas a la red (solicitar datos a la API)
+        Diseñado para ser ejecutado en navegadores
+
+        Trabaja bajo modelo asincrono y no bloqueante
+        con el procedimiento 
+        Single Thread - Multi thread
+        Operaciones de CPU y Operaciones I/O
+        Operaciones Concurrentes y Paralelas
+        Operaciones Bloqueantes y No Bloqueantes
+        Operaciones Sincronas y Asincronas
+        
+        En javascript vamos a tener 2 tipos de codigo:
+        Codigo sincrono bloqueante y 
+        Codigo asincrono no bloqueante
+        */
+
+
+        //Codigo sincrono bloqueante
+        (()=>{
+            console.log("Codigo sincrono");
+            console.log("inicio");
+        })()
+
+        function dos(){
+            console.log("Dos");
+        }
+        function uno(){
+            console.log("Uno");
+            dos();
+            console.log("tres");
+        }
+
+        uno();
+        console.log("fin");
+
+        //Codigo asincrono no bloqueante
+        (()=>{
+            console.log("Codigo asincrono");
+            console.log("inicio");
+
+            function dos(){
+                setTimeout(function(){
+                    console.log("Dos");
+                },1000); //quedaria de ultima porque el tiempo es mayor y se apila
+            }
+            function uno(){
+                setTimeout(function(){
+                    console.log("uno");
+                },0); //tiene set time 0 pero el console no tiene nada y lo vuelve primero o primordial sincrono el console
+                dos();
+                console.log("Tres"); //sale de primero porque se devuelve sincrono
+            }
+
+            uno(); //despues del fin iniciamos asincronos
+            console.log("Fin"); //sale despues del 3 al ser sincrono tambien
+
+
+
+        })();
+
+    </script>
+</body>
+</html>

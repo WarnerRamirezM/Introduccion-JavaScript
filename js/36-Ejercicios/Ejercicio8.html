@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<h1>Ejercicio 7</h1>
+<body>
+<script>
+    /*Programa una funcion que elimine cierto patron de caracteres de un 
+    texto dado pe. mufuncion xyz1, xyz2*/
+
+    const eliminarCaracter = (texto="", busqueda="") => 
+    (!texto) ? 
+    console.warn("Ingresa un texto") :
+    (!busqueda) ?
+    console.warn("No ingresaste el patron") :
+    console.info(texto.replace(new RegExp(busqueda,"ig"),"")); //no le pasamos 2 parametro para que no reemplace con nada
+
+eliminarCaracter();
+eliminarCaracter("xy1, xy2 ,xy3");
+eliminarCaracter("xy1, xy2 ,xy3", "xy");
+</script>
+
+
+    
+</body>
+</html>
