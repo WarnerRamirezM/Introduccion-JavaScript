@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<h1>Async - await en Javascript</h1>
+<body>
+    <script>
+        //estas funciones esperan a que algo se cumpla para seguir ejecutando el proceso 
+        //trabajan en conjunto con las PROMISE
+
+    function cuadradoPromise(value){ 
+    if(typeof value !== "number") { //esta validacion lo captura el catch y valida todas las promesas
+        return Promise.reject("El valor ingresado no es un numero");
+    }
+    
+           return new Promise((resolve,reject)=>{ //instancia del objeto promise
+            setTimeout(() => {
+                resolve({
+                    value,
+                    result: value*value
+                }); //resultado positivo en caso de que se cumpla
+               
+            }, 0 | Math.random()*100); //da centecimas de segundo
+           });
+}
+
+//function asyn
+async function funcionAsincronaDeclarada(){
+    try {
+        console.log("Inicio Async Funtion");
+        let obj = await cuadradoPromise(0); //se declara con let porque los valores van a variar
+        console.log(`Async functions: ${obj.value}, ${obj.result} `);
+        
+        obj = await cuadradoPromise(1); //espera el resultado de esta ejecucion
+        console.log(`Async functions: ${obj.value}, ${obj.result} `);
+
+        obj = await cuadradoPromise(2); //espera el resultado de esta ejecucion
+        console.log(`Async functions: ${obj.value}, ${obj.result} `);
+
+        obj = await cuadradoPromise("3"); //espera el resultado de esta ejecucion
+        console.log(`Async functions: ${obj.value}, ${obj.result} `);
+
+    } catch (error) {
+        
+    }
+}
+funcionAsincronaDeclarada();
+
+//funcion asyncrona expresada 
+const functionAsyncExpresada = async()=>{
+    try {
+        console.log("Inicio Async Funtion");
+        let obj = await cuadradoPromise(0); //se declara con let porque los valores van a variar
+        console.log(`Async functions: ${obj.value}, ${obj.result} `);
+        
+        obj = await cuadradoPromise(1); //espera el resultado de esta ejecucion
+        console.log(`Async functions: ${obj.value}, ${obj.result} `);
+
+        obj = await cuadradoPromise(2); //espera el resultado de esta ejecucion
+        console.log(`Async functions: ${obj.value}, ${obj.result} `);
+
+        obj = await cuadradoPromise("3"); //espera el resultado de esta ejecucion
+        console.log(`Async functions: ${obj.value}, ${obj.result} `);
+    } catch (error) {
+        
+    }
+}
+functionAsyncExpresada();
+
+    </script>
+    
+</body>
+</html>

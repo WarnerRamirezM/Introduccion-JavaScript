@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<h1>Callbacks en Javascript</h1>
+<body>
+    <script>
+//llamadas de vuelta: Es el mecanismo para invocar algunas de sus funciones 
+        function cuadradoCallback(value, Callbacks){ //una funcion se llama dentro de si misma
+            setTimeout(() => {
+                Callbacks(value, value*value) //funcion al cuadrado
+
+
+
+            }, 0 | Math.random()*100); //da centecimas de segundo
+
+        }
+        cuadradoCallback(0,(value, result)=>{
+        console.log("Inicia callback");
+        console.log(`callback: ${value}, ${result}  `);
+                cuadradoCallback(3,(value, result)=>{
+                console.log(`callback: ${value}, ${result}  `);
+                });
+        });
+
+
+
+    </script>
+
+
+
+</body>
+</html>
