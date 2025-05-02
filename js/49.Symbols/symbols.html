@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>
+        Symbols en Javascript
+    </h1>
+    <script>
+        //nuevos tipos de datos en javascript
+        Symbol(); //se mantiene privada y crea una referencia unica
+        //acaepta cadena o numero
+        //Son tipos de datos primitivos 
+        let id = "hola";
+        let id2 = "hola";
+        const SALUDAR = Symbol();
+
+        console.log(id===id2); //devuelve true
+
+        let num = Symbol();
+        let num2 = Symbol();
+        console.log(num === num2); //imprime false por se totalmente diferentes
+        
+        
+        //Se utilizan para referencias unicas de objetos
+        const NAME = Symbol();
+        const persona ={
+            edad:28,
+            [NAME]: "Hernan"
+        };
+        console.log(persona);
+        /* Object { Symbol(): "Hernan" }
+​           NAME: "WARNER"
+​           Symbol(): "Hernan"*/
+        persona.NAME = "WARNER";
+        console.log(persona);
+        /*Object { NAME: "WARNER", Symbol(): "Hernan" }*/
+
+        //llamada del atributo del objeto propiedad PUBLICA.
+        console.log(persona.NAME);
+        //llamada del symbol del objeto funciona como PROPIEDAD PRIVADA.
+        console.log(persona[NAME]);
+
+        
+        persona[SALUDAR] = () => {
+            console.log("Esta es una funcion saludar");
+        }
+        console.log(persona);
+        persona[SALUDAR]();
+        
+        //Recorrido a las propiedades solo apareceran las publicas-no incluye los Symbols que son privados
+        for (let propiedad in persona) {
+            console.log(propiedad);
+            console.log(persona[propiedad]);
+        }
+
+        //metodos para listar los symbols privados 
+        console.log( Object.getOwnPropertySymbols(persona));
+        
+
+
+    </script>
+    
+</body>
+</html>

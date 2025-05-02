@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Sets en Javascript</h1>
+    <script>
+//      >>>>>>> USO PARA GUARDAR DATOS UNICOS <<<<<<<<<<<<
+       
+        //lo manda como si fuera un arreglo
+        const set = new Set([99,2,3,4,4,5,true,false,false,{},{},"hola","Hola"]);
+        console.log(set); //no duplica los valores Set(11) [ 1, 2, 3, 4, 5, true, false, {}, {}, "hola"
+        console.log(set.size); //tamaño o numeros de elementos que tiene
+
+        const set2 = new Set();
+        //agregar
+        set2.add(1);
+        set2.add(3);
+        set2.add(3);
+        set2.add(5);
+        set2.add(6);
+        set2.add(true);
+        set2.add(true);
+        set2.add({});
+        //eliminar 
+        set2.delete(3);
+        //Comprobar si existe
+        set2.has(1);
+        console.log("EXISTE? : "+set2.has(1));
+        
+        console.log(set2); //set size solo cuenta los valores no duplicados. 
+        
+        //COMO PUEDO RECORRER ESTOS ELEMENTOS
+        console.log("Inicia ciclo 1");
+        
+        for (item of set2) {
+            console.log(item);
+            
+        }
+        console.log("Inicia ciclo 2");
+        
+        set.forEach(element => {
+            console.log(element);
+                        
+        });
+        //COMO ACCEDER SEGUN LAS POSICIONES EN EL ARREGLOS
+        let arr = Array.from(set); //Convieriendo un tipo de datos ITERABLE a un array
+        console.log(arr);
+        
+        console.log(arr[0]); //set1 = 99
+                
+
+
+
+
+    </script>
+</body>
+</html>

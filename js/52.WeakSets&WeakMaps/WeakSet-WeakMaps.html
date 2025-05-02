@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    
+</head>
+<body>
+    <h1>Mapas Debiles y Sets Debiles</h1>
+    <script>
+        //AL SER DEBILES GENERA UNA REFERENCIA DEBIL RECOLECTAR BASURA PARA LIMPIAR FACILMENTE
+        //HACE UNA MEJORA EN EL RENDIMIENTO DE LA APLICACION
+        //TIENE ALGUNAS CARENCIA 
+        //  *No se puede iterar por ciclos 
+        //  *No se pueden borrar todos los elementos de una sola vez
+        //  *No se puede verificar la propiedad size
+
+        //NO SE PUEDEN AGREGAR VALORES DIRECTAMENTE DE LA FUNCION CONSTRUCTORA
+        //SOLO ACEPTA VALORES DE OBJETOS
+        const ws = new WeakSet(); //Solo se puede agregar objetos de uno en uno al igual que borrar
+        
+        let valor1 = {"valor1": 1};
+        let valor2 = {"valor2": 2};
+        let valor3 = {"valor3": 3};
+        
+        ws.add(valor1);
+        ws.add(valor2);
+        ws.add(valor3);
+        console.log(ws);
+        /*
+        WeakSet(3) [ {…}, {…}, {…} ]
+​
+        <entries>
+​​
+        0: Object { valor1: 1 }
+​​        1: Object { valor1: 3 }
+​​        2: Object { valor1: 2 }
+        
+        */
+            //validar si tiene alguna referencia en valor
+            console.log(
+                ws.has(valor1) //manda true porque si existe la referencia de valor.
+            );
+        //imprimimos cada 1 segundo
+        setInterval(()=>{
+            console.log(ws);
+            
+        },1000);
+        //limpiamos 
+        setTimeout(()=>{
+            console.log("limpia");
+            
+            valor1 = null;
+            valor2 = null;
+            valor3 = null;
+
+
+        },5000); //despues de 5seg borramos o pasamos a null las referencias
+    </script>
+    
+</body>
+</html>

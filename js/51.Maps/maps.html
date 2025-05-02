@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>Maps en Javascript</h1>
+    <script>
+        //SON OBJETOS QUE NOS PERMITEN ALMACENAR CONJUNTO DE VALORES ASOCIADOS A UN OBJETO
+        //ES SIMILAR A UN OBJETO PRIMITIVO SE USA COMO UNA COLECCION DE DATOS QUE ESTAN RELACIONADOS ENTRE SI
+        const mapa = new Map();
+        mapa.set("nombre","hernan"); //llave , valor
+        mapa.set("apellido","ramirez");
+        mapa.set("edad",28);
+        console.log(mapa); //Map(3) { nombre → "hernan", apellido → "ramirez", edad → 28 }
+        console.log(mapa.size); //total de elementos
+        console.log(mapa.has("nombre")); //busca si existe por llave
+        console.log(mapa.get("nombre")); //devuelve el valor de la llave
+        console.log(mapa.set("nombre","warner")); //establecemos un nuevo valor a nombre
+        mapa.delete("apellido"); //borrar una llave
+        console.log(mapa);
+        
+        //COMO RECORREMOS UN MAPA 
+        //ES UN ELEMENTO ITERABLE
+        for(let[key,value] of mapa){
+            console.log(`llave: ${key}, valor: ${value}`);
+            
+        }
+        //otra manera de agregar datos en map
+
+
+        const mapa2 = new Map([
+        ["nombre","Coco"],
+        ["animal","Perro"]
+        ]);
+        console.log(mapa2);
+        
+        //DESTRUCTURACION 
+        const llavesMapa2 = [...mapa2.keys()]; //guarda las llaves
+        console.log("Destructuracion");
+        
+        console.log(llavesMapa2);
+        
+        
+        
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
