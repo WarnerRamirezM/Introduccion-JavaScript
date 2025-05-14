@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <h1>Generators</h1>
+</head>
+<body>
+    <script>
+        /*Es una funcion que permite trabajar de una manera mas amigable en un elemento iterable*/
+        function* iterable(){
+           yield "hola";
+           console.log("Hola consola");
+           yield "Hola 2";
+           console.log("Seguimos con mas instrucciones de nuestro codigo");
+           yield "Hola 3";
+           yield "Hola 4";
+         
+        }
+        let iterador = iterable();
+       /* console.log(iterador.next());
+        console.log(iterador.next());
+        console.log(iterador.next());
+        console.log(iterador.next());
+        console.log(iterador.next());*/
+
+        for(let i of iterador){
+            console.log(i);
+            
+        }
+
+        const arry = [...iterable()];
+        console.log(arry);
+        
+        function cuadrado(valor) {
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve({ valor, resultado: valor * valor });
+        }, Math.random() * 1000);
+    });
+}
+
+async function* generador() {
+    console.log("Inicia generator");
+    yield await cuadrado(0);
+    yield await cuadrado(1);
+    yield await cuadrado(2);
+    yield await cuadrado(3);
+    yield await cuadrado(4);
+    yield await cuadrado(5);
+    console.log("Termina generator");
+}
+
+(async () => {
+    for await (let i of generador()) {
+        console.log(i);
+    }
+})();
+
+
+    </script>
+    
+</body>
+</html>

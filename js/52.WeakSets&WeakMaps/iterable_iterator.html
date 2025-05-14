@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <title>Nuevo tipos de Datos</title>
+</head>
+<body>
+    <h1>Datos en Javascript</h1>
+    <p>Lorem </p>
+    <p>Ipsum</p>
+    <p>Javascript</p>
+
+    <script>
+        /*Iterable es el elemento que se puede recorrer y el iterador es el mecanismo o apuntador que recorre el elemento
+        Destructuracion 
+        For
+        ForOf
+        Promesas
+        ExpressOperator 
+        IteradorInterface
+        map, set, string
+        */
+       const iterable = [1,2,3,4,5]; //arreglo es un elemento iterable
+       const iterador = iterable[Symbol.iterator](); //accedemos al iterador
+       console.log(iterable);
+        console.log(iterador);
+        //el iterador avanza elementos que sean iterables. 
+      
+        let next = iterador.next();
+        while(!next.done){
+            console.log(next.value);
+            next = iterador.next();
+        }
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <title>Proxy en Javascript</title>
+</head>
+<body>
+    <h1>Proxies</h1>
+    <script>
+        /*Permite crear un objeto basado en un objeto literal inicial
+        muy similar a POO donde se tiene un modelo a seguir.
+        Se obtiene ciertas caracteristicas. 
+        No utiliza clases.
+        Recibe objeto literal y crea una copia permitiendo diferentes validaciones
+        es un medio de vinculacion entre el objeto que se basa a la nueva instancia creada.
+            hace una vinculacion entre la copia y el original   
+        */
+       //objeto literal
+        const persona = {
+            nombre: "",
+            apellido: "",
+            edad: 0
+        }
+
+
+        const manejador = {
+            set(obj,prop,value){ //recibe el objeto, las propiedades y el valor.
+                if(Object.keys(obj).indexOf(prop)=== -1){ //busca las coincidencias de las propiedades
+                    return console.log("No se pueden añadir propiedades al proxi diferentes al objeto literal");
+                    
+                }
+                obj[prop] = value
+            }
+        }
+        //proxies 
+        const jon = new Proxy(persona, manejador)
+        jon.nombre="Hernan";
+        jon.apellido="Ramirez";
+        jon.edad = 28;
+        jon.twitter= "@hernanramz"
+        console.log(jon);
+        
+
+
+
+    </script>
+    
+</body>
+</html>
