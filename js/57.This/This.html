@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>This en javascript</title>
+</head>
+<body>
+    <script>
+        //hace refencia al objeto global window
+        console.log(this);
+        console.log(window);
+        console.log(this === window); //contexto global windows
+
+        this.nombre = "Contexto global";
+        console.log(this.nombre); //imprime contexto global
+
+        function imprimir(){
+            console.log(this.nombre); //imprime contexto global
+        }
+        imprimir();
+
+        const objt = {
+            nombre: "Contexto objeto",
+            imprimir() {
+                console.log(this.nombre);
+            }
+        }
+        objt.imprimir(); //imprime contexto objeto esto segun el scope o alcance
+
+
+        const obj2 =
+        {
+            nombre: "Contexto objeto 2",
+                imprimir
+        }
+        obj2.imprimir();
+        //Una arrow function maneja su propio scope o alcance de los bloques
+        //agarra el padre del contexto creado.
+        const obj3 = {
+            nombre: "Contexto objeto 3",
+            imprimir: () => {
+                console.log(this.nombre);
+            }
+        }
+
+        obj3.imprimir();
+        //al tener una funcion declarada
+        function Persona(nombre) {
+            const that = this;
+            that.nombre = nombre;
+            //return console.log(this.nombre); 
+            return function () { //funcion anonima
+                //como no tiene una propiedad nombre regresa al contexto global la funcion,
+                //solucion mandarlo como una arrow function que no genera contexto global
+                console.log(that.nombre,22);
+            }
+
+        }
+        let jon = new Persona("Hernan");
+        //para invocar la funcion como un metodo que retorna la funcion 
+        jon();
+
+
+
+
+
+    </script>
+</body>
+</html>

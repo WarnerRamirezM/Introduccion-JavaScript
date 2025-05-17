@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON</title>
+</head>
+<body>
+    <h1>Notacion de objeto JSON</h1>
+    <script>
+        const json = {
+            cadena: "Hernan",
+            numero: 28,
+            boolean: true,
+            array: ["Programador", "js"],
+            objeto: {
+                email: "warner@gmail.com"
+            },
+            nulo:null
+        }
+
+        console.log(JSON);
+        console.log(JSON.parse("{}")); //parsea a un objeto en javascript
+        console.log(JSON.parse("[1,2,3]")); //lo parsea a un array
+        console.log(JSON.parse("19")); //parsea a un numero
+        
+
+        //convierte un objeto valido de javascript a un json valido
+        console.log(JSON.stringify({})); //objeto en json
+        console.log(JSON.stringify([1, 2, 3])); //lo parsea a un array json
+        console.log(JSON.stringify(19)); //parsea a un numero json
+        console.log(JSON.stringify({ x: 2, y: 5 })); //parsea a un numero json
+
+
+        console.log(JSON.parse('{"cadena":"Kimberly","numero":40}'));
+
+    </script>
+
+</body>
+</html>

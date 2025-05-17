@@ -1,0 +1,10 @@
+{
+  "cadena": "Hernan",
+  "numero": 28,
+  "boolean": true,
+  "array": [ "Programador", "js" ],
+  "objeto": {
+    "email": "warner@gmail.com"
+  },
+  "nulo": null
+}

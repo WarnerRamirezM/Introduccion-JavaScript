@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>58. call, apply, bind</title>
+</head>
+<body>
+    <h1>
+        58. call, apply, bind
+    </h1>
+    <script>
+        //Si se necesita conservar la referencia de un scope particular 
+        //y utilizarlo se utiliza call, apply, bind. 
+        console.log(this);
+        this.lugar = "Contexto global";
+
+        function Saludar(saludo, aQuien) {
+            console.log(`${saludo} ${aQuien} desde el ${this.lugar}`);
+        }
+        Saludar("Hola","Rami");
+        //creamos un objeto
+        const obj = {
+            lugar: "Contexto obj"
+        }
+        Saludar.call(obj,"Hola","Hernan"); //recibe como parametro un obj que va a ser el contexto
+        Saludar.apply(obj,["Adios","Ramirez"]);
+
+        const persona = {
+            nombre: "Maria",
+                Saludo: function() {
+                    console.log(`hola ${this.nombre}`)
+                }
+        }
+        persona.Saludo();
+
+    </script>
+
+</body>
+</html>

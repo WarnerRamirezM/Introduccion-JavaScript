@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\Desktop\\Javascript\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Asus\\Desktop\\Javascript\\js\\35-EjerciciosLogica\\ejercicio1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:js\\35-EjerciciosLogica\\ejercicio1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Asus\\Desktop\\Javascript\\DOM\\60.Web APIs\\webAPI.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DOM\\60.Web APIs\\webAPI.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ejercicio1.html",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Javascript\\js\\35-EjerciciosLogica\\ejercicio1.html",
-              "RelativeDocumentMoniker": "js\\35-EjerciciosLogica\\ejercicio1.html",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\Javascript\\js\\35-EjerciciosLogica\\ejercicio1.html",
-              "RelativeToolTip": "js\\35-EjerciciosLogica\\ejercicio1.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAKAAAAAAAAAA==",
+              "Title": "webAPI.html",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Javascript\\DOM\\60.Web APIs\\webAPI.html",
+              "RelativeDocumentMoniker": "DOM\\60.Web APIs\\webAPI.html",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\Javascript\\DOM\\60.Web APIs\\webAPI.html",
+              "RelativeToolTip": "DOM\\60.Web APIs\\webAPI.html",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABIAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-04-22T19:00:17.008Z",
+              "WhenOpened": "2025-05-16T04:58:03.622Z",
               "EditorCaption": ""
             }
           ]

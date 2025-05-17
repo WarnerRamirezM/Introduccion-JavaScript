@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Propiedades Dinámicas de los Objetos
+    </title>
+</head>
+<body>
+    <script>
+
+        let aleatorio = {
+            propiedad: "Valor",
+            [`id_${aleatorio}`]: "Valor aleatorio"
+
+        };
+        const objUsuario = {};
+        console.log(objUsuario);
+        const usuarios = ["Hernan", "Ramirez", "Karla", "Warner"];
+        usuarios.forEach((usuario, index) => objUsuario[`Id_${index}`] = usuario);
+        console.log(objUsuario);
+
+
+
+
+
+    </script>
+</body>
+</html>
